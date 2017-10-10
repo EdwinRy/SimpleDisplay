@@ -11,7 +11,9 @@ int width,height;
 char* pixels;
 //Display Manipulation
 void openDisplay(int w, int h)
-{
+{	
+	width = w;
+	height = h;
 	if(SDL_Init(SDL_INIT_VIDEO) != 0){return -1;}
 	window = SDL_CreateWindow("Display", SDL_WINDOWPOS_UNDEFINED,
 				SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
